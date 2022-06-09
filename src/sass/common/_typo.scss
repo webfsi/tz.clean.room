@@ -1,0 +1,51 @@
+.h1, h1 {
+	font-size: 76px;
+	line-height: 110%;
+	margin-bottom: 30px;
+	@include laptop {
+		font-size: 56px;
+	}
+	@include tabletMaxi {
+		font-size: 42px;
+		margin-bottom: 20px;
+	}
+}
+
+.h2, h2 {
+	font-size: 44px;
+	line-height: 120%;
+	margin-bottom: 25px;
+	@include laptop {
+		font-size: 40px;
+	}
+	@include tabletMaxi {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+.h3 {}
+
+.txt {
+  p, ul, ol, li {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

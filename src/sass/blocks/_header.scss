@@ -1,0 +1,192 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: map-get($z-index, header);
+
+	&__inner {
+		padding: 17px 30px 17px 54px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include laptop {
+			padding: 17px 15px 17px 15px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		>*:not(:last-child) {
+			margin-right: 20px;
+			@include laptop {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__burger {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-wrap: wrap;
+		>*:not(:last-child) {
+			margin-right: 20px;
+			@include laptop {
+				margin-right: 10px;
+			}
+		}
+	}
+
+}
+
+.logo {
+	max-width: 100px;
+	flex-shrink: 0;
+	a {
+		display: block;
+	}
+}
+
+.choise-btn {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	padding: 2px;
+	border-radius: 48px;
+	span {
+		cursor: default;
+	}
+
+	>*+* {
+		margin-left: 4px;
+	}
+}
+
+.header__nav {
+	@media (max-width: 1200px) {
+		display: none;
+	}
+}
+
+.menu {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0.2px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	@include laptop {
+		font-size: 14px;
+	}
+	li {
+		margin: 0 5px;
+		@include laptop {
+			margin: 0 5px;
+		}
+	}
+	a {
+		display: inline-block;
+		padding: 5px 10px;
+		border: 1px solid transparent;
+		&:hover {
+			border-bottom-color: $c-black-two;
+		}
+		@include laptop {
+			padding: 5px;
+		}
+	}
+}
+
+.header__burger {
+	@include mobile {
+		.tel-cap {
+			display: none;
+		}
+	}
+}
+
+.tel-cap {
+	display: flex;
+	align-items: center;
+	>* {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: 0.2px;
+		padding: 5px 10px;
+		border: 1px solid transparent;
+		position: relative;
+		flex-shrink: 0;
+		&:not(:last-child) {
+			margin-right: 5px;
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: -4px;
+				width: 2px;
+				height: 14px;
+				margin-top: -9px;
+				background-color: $c-black-two;
+			}
+		}
+		@include laptop {
+			font-size: 14px;
+		}
+	}
+	a {
+		&:hover {
+			border-bottom-color: $c-black-two;
+		}
+	}
+}
+
+.burger {
+	line-height: 0;
+	margin-top: -2px;
+}
+
+.btn-burger {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -11px;
+		width: 22px;
+		height: 2px;
+		border-radius: 5px;
+		background-color: $c-black-two;
+		transition: all 0.2s ease-in-out;
+
+		&:first-child {
+			margin-top: -5px;
+		}
+		&:last-child {
+			margin-top: 3px;
+		}
+	}
+	&.active {
+		span {
+			&:first-child {
+				margin-top: 0;
+				transform: rotate(135deg);
+			}
+			&:last-child {
+				margin-top: 0;
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+

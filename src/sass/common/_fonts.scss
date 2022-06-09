@@ -1,0 +1,19 @@
+//include third-party fonts
+
+@mixin font-face($font-name, $file-name, $font-weight, $font-style) {
+	@font-face {
+		font-family: quote($font-name);
+		font-style: $font-style;
+		font-weight: $font-weight;
+		src: url("../fonts/"+ $file-name + ".woff2") format("woff2"),
+			url("../fonts/"+ $file-name + ".woff") format("woff");
+		font-display: swap;
+	}
+}
+
+// @include font-face(FontName, FontWeight-FileName, 400, normal);
+@include font-face(Travels, TTTravelsLight, 300, normal);
+@include font-face(Travels, TTTravelsRegular, 400, normal);
+@include font-face(Travels, TTTravelsMedium, 500, normal);
+@include font-face(Travels, TTTravelsDemiBold, 600, normal);
+@include font-face(Travels, TTTravelsBold, 700, normal);

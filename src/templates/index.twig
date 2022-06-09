@@ -1,0 +1,20 @@
+---
+title: Home Page
+description: Home Page description
+pageName: homePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+	<main>
+		{% include 'pages/home/_hero.twig' %}
+		{% include 'pages/home/_card.twig' %}
+		{% include 'pages/home/_choise.twig' %}
+		<div class="fixed-el">
+			<button class="fixed-el__inner">
+				<span class="fixed-el__circle"></span>
+				<span class="fixed-el__text"><span>Заказать уборку</span></span>
+			</button>
+		</div>
+	</main>
+{% endblock %}

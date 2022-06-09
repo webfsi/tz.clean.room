@@ -1,0 +1,19 @@
+.btn {
+	position: relative;
+	outline: none;
+	box-shadow: none;
+	transition: all 0.2s ease-in-out;
+	display: inline-block;
+	background: #fff;
+	border-radius: 34px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 21px;
+	padding: 5px 12px;
+	color: #636C81;
+	z-index: 1;
+	&_active, &_second {
+		color: #fff;
+		background-color: #5A30F0;
+	}
+}
