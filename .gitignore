@@ -30,7 +30,6 @@ nbproject
 _tmp
 node_modules
 bower_components
-dist
 src/sass/generated
 src/templates/svg
 _sprite.scss
