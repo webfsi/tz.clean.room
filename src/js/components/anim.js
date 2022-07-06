@@ -5,6 +5,24 @@ export default () => {
 	gsap.registerPlugin(ScrollTrigger);
 	// animation
 
+	const preloaders = document.querySelectorAll(".preloader");
+
+	preloaders.forEach(element => {
+		setTimeout(() => {
+			element.classList.add('hidden');
+		}, 5000);
+		const value = element.querySelector('[data-value]');
+		gsap.from(value, {
+			textContent: 0,
+			duration: 5,
+			ease: 'Power0.easeNone',
+			snap: { textContent: 1 },
+			stagger: 1,
+			// onUpdate: textContent.replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+		});
+	});
+
+
 
 	const animFadeY = document.querySelectorAll("[data-anim-fadey]");
 	const animDuration = 1;
@@ -417,7 +435,7 @@ export default () => {
 		const menuChoise = document.querySelectorAll('[data-choise] .choise-menu__btn')
 
 		menuChoise.forEach((itemMenu, index) => {
-			itemMenu.addEventListener('mouseover', function(e) {
+			itemMenu.addEventListener('click', function(e) {
 				// itemMenu.parentElement.querySelector('.active').classList.remove('active');
 
 				const value = index + 1;

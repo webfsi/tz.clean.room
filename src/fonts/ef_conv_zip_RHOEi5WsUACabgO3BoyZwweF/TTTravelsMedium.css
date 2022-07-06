@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TTTravelsMedium';
+    src: url('fonts/TTTravelsMedium.eot');
+    src: url('fonts/TTTravelsMedium.eot') format('embedded-opentype'),
+         url('fonts/TTTravelsMedium.woff2') format('woff2'),
+         url('fonts/TTTravelsMedium.woff') format('woff'),
+         url('fonts/TTTravelsMedium.ttf') format('truetype'),
+         url('fonts/TTTravelsMedium.svg#TTTravelsMedium') format('svg');
+}
